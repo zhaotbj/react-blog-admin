@@ -7,17 +7,19 @@ import { Layout, Icon} from 'antd';
 import Menus from './components/Menus'
 import Home from './view/Home'
 import Articles  from './view/Articles';
+import AddArtic from './view/list/addArtic'
+import EditArtic from './view/list/editArtic'
+import Detail from './view/list/detail'
 
 
 
+// import Forms from './view/Forms';
+// // import Login from './views/forms/Login'
+// import AddForm from './view/forms/AddForm'
 
-import Forms from './view/Forms';
-// import Login from './views/forms/Login'
-import AddForm from './view/forms/AddForm'
+// import EditTable from './view/Tables/EditTable'
 
-import EditTable from './view/Tables/EditTable'
-
-import UserList from './view/Tables/UserList'
+// import UserList from './view/Tables/UserList'
 
 class App extends Component {
   constructor(props) {
@@ -56,10 +58,12 @@ class App extends Component {
             <Content
               style={{ margin: '0 16px', overflow: 'initial', flex: '1 1 0' }}
             >
-               
               <Route exact path='/' component={Home} />
               <Route exact path='/articles' component={Articles} />
-              <Route exact path='/articles/edit' component={EditTable} />
+              <Route exact path='/articles/add' component={AddArtic} />
+              <Route exact path='/articles/edit' component={EditArtic} />
+              <Route exact path='/articles/detail/:id' component={Detail} />
+              {/* <Route exact path='/articles/edit' component={Edit} /> */}
             {/*   <Route exact path='/forms/add/' component={AddForm} />
               <Route exact path='/table/' component={Tables} />
               <Route exact path='/table/editTable/' component={EditTable} />

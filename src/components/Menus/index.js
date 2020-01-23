@@ -103,7 +103,7 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 
-Menus.contextTypes = {
-  router: PropTypes.object.isRequired
-}
+// Menus.contextTypes = {
+//   router: PropTypes.object.isRequired
+// }
 export default connect(mapStateToProps, mapDispatchToProps)(Menus)

@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
 import { Route } from "react-router-dom";
 import BasicTable from './Tables/BasicTable'
-import EditTable from './Tables/EditTable'
+import List from './list/list'
+import AddArtic from './list/addArtic'
 
 class Tables extends Component {
   render() {
     return (
       <div>
         <div>
-          <Route exact path="/articles" component={BasicTable} />
+          <Route exact path="/articles" component={List} />
 
-          <Route exact path="/articles/edit" component={ } />
+          {/* <Route exact path="/articles/add" component={ AddArtic } /> */}
+          {/* <Route exact path="/articles/edit" component={ } /> */}
         </div>
 
       </div>
