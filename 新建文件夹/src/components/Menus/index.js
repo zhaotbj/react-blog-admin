@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import { Menu, Icon } from 'antd'
 import {connect} from 'react-redux'
 import PropTypes from 'prop-types'
+import { createHashHistory } from 'history'; // 如果是hash路由
+const history = createHashHistory();
+
 let router = [
   {
     icon: 'pie-chart',
@@ -27,6 +30,7 @@ let router = [
     ]
   }
 ];
+
 const injectMenu = (menus) => {
   const { SubMenu } = Menu;
   return menus.map((item, key) => {
@@ -69,16 +73,23 @@ class Menus extends Component {
   }
   handleMenu=(params)=> {
    
-    this.props.history.push(params.key)
+    // this.props.history.push(params.key)
+    // history.push('/login');
+    // console.log(params, 'params');
+    history.push(params.key);
+    
  
+  }
+  componentDidMount(){
+    
   }
   render() {
     return (
       <div>
-
+{/* defaultSelectedKeys={[this.props.history.location.pathname]} */}
        <Menu theme='dark'
           mode="inline"
-          defaultSelectedKeys={[this.props.history.location.pathname]}
+          
           onClick={this.handleMenu}
         >
           {injectMenu(router)}
@@ -103,7 +114,7 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 
-Menus.contextTypes = {
-  router: PropTypes.object.isRequired
-}
+// Menus.contextTypes = {
+//   router: PropTypes.object.isRequired
+// }
 export default connect(mapStateToProps, mapDispatchToProps)(Menus)

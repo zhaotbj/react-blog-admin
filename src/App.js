@@ -6,11 +6,15 @@ import { Layout, Icon} from 'antd';
 
 import Menus from './components/Menus'
 import Home from './view/Home'
+import Articles  from './view/Articles';
+
+
+
 
 import Forms from './view/Forms';
 // import Login from './views/forms/Login'
 import AddForm from './view/forms/AddForm'
-import Tables from './view/Tables';
+
 import EditTable from './view/Tables/EditTable'
 
 import UserList from './view/Tables/UserList'
@@ -54,11 +58,12 @@ class App extends Component {
             >
                
               <Route exact path='/' component={Home} />
-              <Route exact path='/forms/' component={Forms} />
-              <Route exact path='/forms/add/' component={AddForm} />
+              <Route exact path='/articles' component={Articles} />
+              <Route exact path='/articles/edit' component={EditTable} />
+            {/*   <Route exact path='/forms/add/' component={AddForm} />
               <Route exact path='/table/' component={Tables} />
               <Route exact path='/table/editTable/' component={EditTable} />
-              <Route exact path='/table/userList/' component={UserList} />
+              <Route exact path='/table/userList/' component={UserList} /> */}
              
             </Content>
           </Layout>
