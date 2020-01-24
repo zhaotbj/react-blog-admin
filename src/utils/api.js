@@ -1,19 +1,19 @@
 import axios from 'axios'
 import qs from 'qs'
 
-if (process.env.NODE_ENV == 'development') {
+if (process.env.NODE_ENV === 'development') {
   axios.defaults.baseURL = 'http://192.168.0.103:3002/';
-} else if (process.env.NODE_ENV == 'debug') {
+} else if (process.env.NODE_ENV === 'debug') {
   axios.defaults.baseURL = '';
-} else if (process.env.NODE_ENV == 'production') {
-  axios.defaults.baseURL = 'http://api.123dailu.com/';
+} else if (process.env.NODE_ENV === 'production') {
+  axios.defaults.baseURL = 'http://118.190.210.157/';
 }
 
 
 
 
 var instance = axios.create({
-  baseURL: 'http://192.168.0.102:3002/',
+  baseURL: 'http://118.190.210.157:3002/',
   timeout: 1000,
   headers: {
     'Content-Type': 'application/x-www-form-urlencoded'

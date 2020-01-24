@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 import { post, get } from '../../utils/api'
-import { Table, Button, Modal, Tag ,message} from 'antd'
+import { Table, Button,message} from 'antd'
 class List extends Component {
   constructor(props) {
     super(props);
@@ -99,7 +99,7 @@ class List extends Component {
   getList=()=>{
     get('/article/getAllList').then(res => {
       console.log(res.message, 'res=====')
-      if (res.code == 200) {
+      if (res.code === 200) {
         this.setState({
           list: res.message
         })
@@ -110,7 +110,7 @@ class List extends Component {
   handleDelete=(value)=>{
     console.log(value)
     post('/article/delete', {articleId:value}).then(res=>{
-      if(res.code==200){
+      if(res.code===200){
         message.success('删除成功');
         this.getList()
       }

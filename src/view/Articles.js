@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Route } from "react-router-dom";
-import BasicTable from './Tables/BasicTable'
+// import BasicTable from './Tables/BasicTable'
 import List from './list/list'
-import AddArtic from './list/addArtic'
+// import AddArtic from './list/addArtic'
 
 class Tables extends Component {
   render() {

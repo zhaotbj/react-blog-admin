@@ -1,7 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { Form, Icon, Input, Button, Checkbox } from 'antd';
-import { post } from '../../utils/api'
+import { Form, Icon, Input, Button } from 'antd';
 import './style.scss'
 import {loginRequest}  from '../../store/login/index'
 class Login extends React.Component {
@@ -39,21 +38,23 @@ class Login extends React.Component {
           <Form.Item>
             {getFieldDecorator('username', {
               rules: [{ required: true, message: 'Please input your username!' }],
+              initialValue:''
             })(
               <Input
                 prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
-                placeholder="Username"
+                placeholder="admin"
               />,
             )}
           </Form.Item>
           <Form.Item>
             {getFieldDecorator('password', {
               rules: [{ required: true, message: 'Please input your Password!' }],
+              initialValue:''
             })(
               <Input
                 prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />}
                 type="password"
-                placeholder="Password"
+                placeholder="123456"
               />,
             )}
           </Form.Item>

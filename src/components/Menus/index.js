@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Menu, Icon } from 'antd'
 import {connect} from 'react-redux'
-import PropTypes from 'prop-types'
 let router = [
   {
     icon: 'pie-chart',

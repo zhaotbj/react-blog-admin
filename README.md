@@ -1,60 +1,68 @@
-做头部
-## 使用react-redux
-## 拆分store
-## 使用immutable插件
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## 在最外层的store中使用redux-immutable插件
+## Available Scripts
 
-# 使用redux-think中间件处理函数异步的接口返回的数据
+In the project directory, you can run:
 
-#使用了 使用immutable数据的时候，store中存储的是immutable数据，同时我接口返回的时候也要是一个immutable数据，在返回
-```
-const changeList=(data)=>(
-  {
-    type: constants.CHANGE_LIST,
-    data:fromJS(data)
-  }
-)
-```
-7-8actionCreators与constants的拆分(1)
-7-9使用Immutable.js来管理store中的数据
-7-10使用redux-immutable统一数据格式.mp4
-7-12
-获取异步数据
-7-14
-搜索的换页
-7-15
-加icon的旋转效果
-7-16 
-避免多次请求 优化
-```
-handleInputFocus(list) {
-      if(list.size===0){
-        dispatch(actionCreators.getList())
-      }
-      dispatch(actionCreators.searchFocus())
-    },
-```
+### `yarn start`
 
+Runs the app in the development mode.<br />
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
---------------
+The page will reload if you make edits.<br />
+You will also see any lint errors in the console.
 
-# 首页
+### `yarn test`
 
-8-2 首页的拆分
+Launches the test runner in the interactive watch mode.<br />
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-8-3 topic
-8-4 list 
-8-5
+### `yarn build`
 
-点击出现更多 和 返回顶部
-8-10 组件性能优化 
-每一次store中数据的变化就会影响所有的组件的reader函数重新渲染。
+Builds the app for production to the `build` folder.<br />
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-使用PureComponent的时候用Immutable ，不然会出现坑
+The build is minified and the filenames include the hashes.<br />
+Your app is ready to be deployed!
 
-9-8 异步组件及withRouter路由方法的使用
-优化，加载一个js的文件，会比较慢
-异步组件的使用，使用第三方插件 react-loadable
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-配置动态的路由获取参数，我在点击详情页的时候会加载异步代码，加载一个chunk.js
+### `yarn eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+
+### Analyzing the Bundle Size
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+
+### Making a Progressive Web App
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+
+### Advanced Configuration
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+
+### Deployment
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+
+### `yarn build` fails to minify
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify

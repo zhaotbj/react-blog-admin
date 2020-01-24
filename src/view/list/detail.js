@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { post, get } from '../../utils/api'
+import { get } from '../../utils/api'
 import './detail.scss'
 class Detail extends Component {
   constructor(props) {
