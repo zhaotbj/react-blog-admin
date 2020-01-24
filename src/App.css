@@ -3,3 +3,14 @@
   height: 100%;
 }
 
+.user_info {
+  display: flex;
+  height: 50px;
+  align-items: center;
+    justify-content: flex-end;
+}
+.user_info img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}

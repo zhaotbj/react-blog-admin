@@ -2,7 +2,7 @@ import axios from 'axios'
 import qs from 'qs'
 
 if (process.env.NODE_ENV == 'development') {
-  axios.defaults.baseURL = 'http://192.168.0.103:3000/';
+  axios.defaults.baseURL = 'http://192.168.0.103:3002/';
 } else if (process.env.NODE_ENV == 'debug') {
   axios.defaults.baseURL = '';
 } else if (process.env.NODE_ENV == 'production') {
@@ -13,7 +13,7 @@ if (process.env.NODE_ENV == 'development') {
 
 
 var instance = axios.create({
-  baseURL: 'http://localhost:3000/',
+  baseURL: 'http://192.168.0.102:3002/',
   timeout: 1000,
   headers: {
     'Content-Type': 'application/x-www-form-urlencoded'
